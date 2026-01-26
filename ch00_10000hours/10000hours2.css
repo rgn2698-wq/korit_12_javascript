@@ -1,0 +1,258 @@
+/* 1. 기본 폰트 및 배경 설정 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'MaplestoryOTFBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ridibatang';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/Ridibatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MaplestoryOTFBold', 'Noto Sans KR', sans-serif;
+    background: linear-gradient(135deg, #240b36, #2E1A47, #5c258d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 2. 메인 컨테이너 */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 50px 30px;
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 3. 타이틀 영역 */
+.title-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.title-text {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #E6E6FA;
+    text-shadow: 0 0 10px #9370DB;
+    margin: 0;
+    z-index: 2;
+    position: relative;
+}
+
+.clock_img {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    filter: drop-shadow(0 0 10px #E6E6FA);
+    z-index: 1;
+}
+
+/* 4. 명언 및 설명 영역 */
+.quote {
+    font-family: 'Ridibatang', serif; 
+    
+    font-size: 1.2rem;
+    color: #D8BFD8; 
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-style: normal;
+    letter-spacing: 0.05rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.intro {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.intro_saying {
+    font-family: 'Ridibatang', serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #FFB6C1;
+    margin-bottom: 15px;
+}
+
+.explain {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #E6E6FA;
+    padding: 50px 20px;
+    z-index: 1;
+}
+
+.explain p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: center;
+
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+}
+
+.explain p span {
+    color: #FFB6C1;
+    font-size: 1.5rem;
+}
+
+.quotes img {
+    position: relative;
+    z-index: 2;
+    width: 300%;
+    max-width: 400px;
+    height: auto;
+    filter: invert(1);
+}
+
+/* 5. 입력 폼 */
+.input-form {
+    font-size: 1.3rem;
+    line-height: 2.5;
+    margin-bottom: 40px;
+}
+
+.input-form input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #9370DB;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    width: 150px;
+    padding: 5px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.input-form input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1rem;
+}
+
+.input-form input:focus {
+    outline: none;
+    border-bottom-color: #FF69B4;
+    box-shadow: 0 5px 10px rgba(255, 105, 180, 0.3);
+}
+
+/* 6. 버튼 디자인 */
+.action-btn, .go-btn {
+    background: linear-gradient(45deg, #7B68EE, #9370DB);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.action-btn:hover, .go-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(147, 112, 219, 0.6);
+    background: linear-gradient(45deg, #6A5ACD, #8A2BE2);
+}
+
+.go-btn {
+    background: linear-gradient(45deg, #FF69B4, #FF1493);
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #FF69B4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+#result p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+#result-field {
+    color: #FFB6C1;
+    font-weight: bold;
+}
+
+#result-days {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 15px #FF69B4;
+}
+
+/* 애니메이션 키프레임 */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 모바일 대응 */
+@media (max-width: 600px) {
+    .title-text { font-size: 2rem; }
+    .container { padding: 30px 20px; }
+    .input-form input { width: 100px; font-size: 1.2rem; }
+}
