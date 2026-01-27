@@ -1,0 +1,117 @@
+/* 1. 기본 설정 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    background-color: #e8bdff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* 2. 메인 박스 */
+.shopping-box {
+    background-color: #c67ef9;
+    width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.title {
+    color: #444;
+    margin-bottom: 25px;
+}
+
+/* 3. 입력창 그룹 */
+.input-group {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+
+#item-input { width: 50%; } /* 상품명은 좀 길게 */
+#price-input { width: 30%; } /* 가격은 좀 짧게 */
+
+input:focus {
+    border-color: #FFB7B2; /* 포커스 시 분홍색 */
+}
+
+#add-btn {
+    width: 20%;
+    background-color: #FFB7B2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#add-btn:hover {
+    background-color: #ff9e99;
+}
+
+/* 4. 리스트 스타일 */
+.list {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto; /* 내용 많으면 스크롤 */
+    margin-bottom: 20px;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.item-name { font-weight: bold; color: #333; }
+.item-price { color: #888; font-size: 0.9rem; margin-right: 10px; }
+
+/* 삭제 버튼 */
+.delete-btn {
+    background-color: #eee;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    color: #555;
+}
+
+.delete-btn:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+/* 5. 총 합계 */
+.total-wrap {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    border-top: 2px dashed #ddd;
+    padding-top: 20px;
+}
+
+#total-price {
+    color: #FF6F61;
+    font-size: 1.5rem;
+}

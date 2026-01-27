@@ -1,268 +1,271 @@
 @font-face {
-    font-family: 'NexonMaplestory';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff') format('woff');
-    font-weight: 300;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'NexonMaplestory';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
-    font-weight: 700;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'OngleIpSeaBreeze';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2510-1@1.0/Ownglyph_the_sea_breeze-Rg.woff2') format('woff2');
+    font-family: 'MaplestoryOTFBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
     font-weight: normal;
-    font-display: swap;
+    font-style: normal;
 }
 
-/* 1. 기본 설정 */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: NexonMaplestory;
-    font-size: 300;
+@font-face {
+    font-family: 'Ridibatang';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/Ridibatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-
-body {
-    background-color: #ce8dff; 
+#app{
+    font-family: GmarketSansMedium;
+    background-color: #5b2386;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
     text-align: center;
-    line-height: 1.6;
-    text-shadow: 2px 2px 0px #2E0249;
+    padding-bottom:70px;
 }
 
-.container {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    font-family: NexonMaplestory;
-}
-
-/* 2. 타이틀 */
-.title-box {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    width: 100%;
-}
-
-.clock_img {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 220px; 
-    height: auto;
-    
-    z-index: -1; 
-}
-
-
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
-
-.title-text {
-    font-family: 'Black Han Sans', sans-serif;
-    font-size: 5rem;
-    font-weight: 900;
-    
-    white-space: nowrap; 
-    
-    color: #5B2386;
-    text-shadow: 
-        2px 0px 0px #F5DF4D,
-        -2px 0px 0px #F5DF4D,
-        0px 2px 0px #F5DF4D,
-        0px -2px 0px #F5DF4D,
-        
-        4px 4px 0px #F5DF4D,
-        8px 8px 0px #F5DF4D,
-        12px 12px 0px #F5DF4D,
-        16px 16px 0px rgba(0,0,0,0.1);
-        
-    text-align: center;
-    margin-bottom: 30px;
-    
-    transform: skew(-5deg);
-    
-    letter-spacing: -2px;
-    line-height: 1.2;
-    position: relative;
-    z-index: 1;
-}
-
-@media (max-width: 500px) {
-    .clock_img {
-        width: 150px;
-    }
-
-    .title-text {
-        font-size: 3rem;
-    }
-}
-
-.quote {
-    font-family: OngleIpSeaBreeze;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    
-    color: #fff;
-    font-weight: bold;
-    
-    
-    text-shadow: -1px -1px 0 #2E0249,  
-                    1px -1px 0 #2E0249,
-                    -1px  1px 0 #2E0249,
-                    1px  1px 0 #2E0249;
-}
-
-.intro {
-    margin-bottom: 50px; /* 타이틀이랑 입력창 사이 간격 넉넉하게 */
-    text-align: center;
-}
-
-.intro_saying {
-    font-size: 1.8rem;
-    color: #eeffa2;
-    font-weight: bold;
-    letter-spacing: -0.5px;
-    opacity: 0.9;
-}
-
-.explain {
-    position: relative;
-    padding: 0 20px;
-}
-
-.quotes {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.quotes img {
-    width: 40px;
-    height: auto;
-    opacity: 0.7;
-}
-
-.explain p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #fff;
-    font-weight: 400;
-}
-
-.explain span {
-    font-family: 'Black Han Sans', sans-serif;
-    font-size: 1.5rem;
-    color: #F5DF4D;
-    font-weight: 900;
-    text-shadow: 2px 2px 0 rgba(91, 35, 134, 0.5); 
-    
+.tit-law{
     display: inline-block;
-    margin-bottom: 5px;
+    position: relative;
+    margin-top:194px;
 }
 
-/* 3. 입력창 디자인 (밑줄 스타일) */
-.input-form p {
-    font-size: 1.4rem;
-    margin-bottom: 25px;
-    font-weight: bold;
-    color: #fff;
-    text-shadow: 2px 2px 0 #2E0249;
+
+.tit-law .img-tit {
+    position: relative;
+    z-index: 10;
 }
 
-input {
-    border: none;
-    border-bottom: 4px solid #2E0249; 
-    background: transparent;
-    color: #FFF700; 
-    font-size: 1.6rem;
+
+.tit-law::after{
+    display: block;
+    content:'';
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:225px;
+    height:225px;
+    margin:-112px 0 0 -112px;
+    background-image: url("../images-law/title_bg.png");
+    background-position: center;
+}
+
+.img-txt{
+    max-width:486px;
+    margin:125px auto 84px;
+}
+
+.txt-desc{
+    position: relative;
+    max-width:475px;
+    margin:0 auto 96px;
+    line-height: 30px;
+    font-size: 18px;
+}
+.txt-desc .tit-desc{
+    font-size: 24px;
+    font-weight:bold;
+}
+.txt-desc::before, .txt-desc::after{
+    position:absolute;
+    top:50%;
+    display: block;
+    content:'';
+    width:37px;
+    height:32px;
+    margin-top:-16px;
+}
+.txt-desc::before{
+    left:0;
+    background-image: url("../images-law/txt-left.png");
+}
+
+.txt-desc::after{
+    right:0;
+    background-image: url("../images-law/txt-right.png");
+}
+
+.cont-inp, .cont-result{
+    font-size: 24px;
+    line-height: 24px;
+}
+.cont-inp .txt-wannabe{
+    margin-bottom:30px;
+}
+.cont-inp .txt-time{
+    margin-bottom:116px;
+}
+.cont-inp .txt-wannabe input, .cont-inp .txt-time input{
+    width:224px;
+    height:53px;
+    margin:0 10px;
+    border:none;
+    border-radius: 7px;
     text-align: center;
-    width: 220px;
-    padding: 7px;
-    outline: none;
-    font-weight: 800;
-    text-shadow: 2px 2px 0 #2E0249;
+    font-size: 24px;
+    vertical-align: 4px;
 }
 
-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-    font-weight: 400;
-    text-shadow: none;
+
+.cont-inp .btn-exc, .btn-go, .btn-share{
+    padding:21px 49px;
+    margin-bottom:150px;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: GmarketSansBold;
+    color:#5B2386;
+    background-color: #FCEE21;
+    border-radius: 56px;
+    cursor:pointer;
+    border:none;
+}
+.btn-go, .btn-share{
+    margin-bottom:0;
+}
+.cont-inp .btn-exc{
+    position: relative;
+}
+.cont-inp .btn-exc::after{
+    display: block;
+    position:absolute;
+    right: -72px;
+    bottom: -20px;
+    content:'';
+    width:64px;
+    height:72px;
+    background-image: url("../images-law/hand.png");
 }
 
-/* 4. 버튼 디자인 */
-.action-btn {
-    background-color: #2E0249; 
-    color: #F5DF4D; 
-    border: 3px solid #fff; 
-    padding: 15px 35px;
-    font-size: 1.3rem;
-    font-weight: 900;
-    border-radius: 50px;
-    cursor: pointer;
-    margin-top: 30px;
-    box-shadow: 0 5px 0px rgba(0,0,0,0.2); 
-    transition: 0.2s;
-    text-shadow: none;
+.cont-result .txt-wannabe, .cont-result .txt-time{
+    line-height:68px;
+}
+.cont-result{
+    margin-bottom:130px;
+}
+.cont-result .txt-wannabe{
+    margin-bottom:22px;
+}
+.cont-result .txt-time{
+    margin-bottom:127px;
+}
+.cont-result .txt-wannabe strong, .cont-result .txt-time strong{
+    font-size:72px;
+    vertical-align:top;
+    font-family: GmarketSansBold;
 }
 
-.action-btn:hover {
-    transform: translateY(3px);
-    background-color: #4a0072;
-    box-shadow: 0 2px 0px rgba(0,0,0,0.2);
+.btn-share{
+    margin-left:18px;
+    background-color: #fff;
 }
 
-/* 5. 숨김 처리용 클래스 */
-.hidden {
-    display: none;
+.cont-footer{
+    font-family: Noto Sans KR;
+    font-size: 12px;
+    line-height: 17px;
 }
 
-/* 6. 결과 화면 */
-#result {
-    margin-top: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 20px;
-    animation: fadeIn 1s;
+.cont-footer .img-footer{
+    width:125px;
+    height:25px;
+    margin:0 auto 20px;
 }
 
-.accent {
-    font-size: 3rem;
-    color: #FFF700; 
-    font-weight: 900;
+@media screen and (max-width:360px){
+    #app{
+        padding:0 24px 32px;
+    }
+    .tit-law{
+        width: 267px;
+        height: 57px;
+        margin-top:76px;
+    }
+    .tit-law::after{
+        width:106px;
+        height:106px;
+        margin: -53px 0 0 -53px;
+        background-size:106px;
+    }
+
+    .img-txt{
+        max-width:297px
+    }
+    .txt-desc{
+        margin-bottom:62px;
+        font-size:14px;
+    }
+    .txt-desc .tit-desc{
+        font-size:16px;
+    }
+    .txt-desc::before, .txt-desc::after{
+        width:18px;
+        height:15px;
+        background-size: 18px 15px;
+    }
+    .cont-inp, .cont-result{
+        font-size: 14px;
+        line-height:14px;
+    }
+    .cont-inp .txt-wannabe input, .cont-inp .txt-time input{
+        width:156px;
+        height:37px;
+        font-size:14px;
+        margin:0 2px;
+        padding:0;
+    }
+    .cont-inp .txt-wannabe{
+        margin-bottom:17px;
+    }
+    .cont-inp .txt-time input{
+        margin-top:17px;
+    }
+    .cont-inp .btn-exc{
+        width:280px;
+        padding: 19px 36px;
+        font-size:17px;
+        line-height: 17px;
+        border-radius: 13px;
+    }
+    .cont-inp .btn-exc::after{
+        width:43px;
+        height:48px;
+        background-size: 43px 48px;
+        right:-40px;
+        top:30px;
+    }
+    .cont-result .txt-wannabe strong, .cont-result .txt-time strong{
+        font-size:24px;
+        line-height:24px;
+        vertical-align: -4px;
+    }
+    .cont-result .txt-wannabe, .cont-result .txt-time{
+        line-height:14px;
+    }
+    .cont-inp .btn-exc, .btn-go, .btn-share{
+        font-size:14px;
+        padding:12px 17px;
+    }
+    .btn-share{
+        margin-left:14px;
+    }
+    .cont-footer .img-footer{
+        width:91px;
+        height:18px;
+    }
+    .cont-footer{
+        font-size:9px;
+    }
+    .img-txt{
+        margin: 69px auto 62px;
+    }
+    .cont-inp .txt-time{
+        margin-bottom:49px;
+    }
+    .cont-inp .btn-exc{
+        margin-bottom:64px;
+        padding: 12px 54px;
+    }
+    .cont-result .txt-time{
+        margin-bottom:55px;
+    }
+    .cont-result{
+        margin-bottom:83px;
+    }
     
-    text-shadow: 3px 3px 0 #2E0249;
-}
-
-.go-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: white;
-    color: #5B2386;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-#result p {
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 2;
 }

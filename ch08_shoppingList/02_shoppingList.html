@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmos List 🪐</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="02_shoppingList.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <main class="glass-panel">
+        <header>
+            <h1>장바구니 <i class="fa-solid fa-rocket"></i></h1>
+            <p>오늘의 보급품을 기록하세요</p>
+        </header>
+
+        <div class="input-area">
+            <div class="input-group">
+                <i class="fa-solid fa-tag"></i>
+                <input id="item-input" type="text" placeholder="상품 이름">
+            </div>
+            <div class="input-group">
+                <i class="fa-solid fa-won-sign"></i>
+                <input id="price-input" type="number" placeholder="가격">
+            </div>
+            <button id="add-btn"><i class="fa-solid fa-plus"></i> 추가</button>
+        </div>
+
+        <div class="table-container scroller">
+            <table id="shopping-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50%;">품목 <i class="fa-solid fa-gift"></i></th>
+                        <th style="width: 35%;">가격 <i class="fa-solid fa-coins"></i></th>
+                        <th style="width: 15%;">삭제</th>
+                    </tr>
+                </thead>
+                <tbody id="shopping-list-body">
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="total-area">
+            <button id="clear-btn"><i class="fa-solid fa-dumpster-fire"></i> 전체 삭제</button>
+            
+            <div class="price-wrap">
+                <span>TOTAL</span>
+                <span id="total-price">0</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="02_shoppingList.js"></script>
+</body>
+</html>

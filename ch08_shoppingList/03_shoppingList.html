@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿠팡! | 장바구니</title>
+    <link rel="shortcut icon" href="../ch08_shoppingList/unnamed.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="03_shoppingList.css">
+
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span class="txt-brown">cou</span>
+                <span class="txt-red">p</span>
+                <span class="txt-yellow">a</span>
+                <span class="logo-ng">
+                    <span class="txt-green">n</span>
+                    <span class="txt-lightblue">g</span>
+                </span>
+            </a>
+            <div class="input-wrap">
+                <input type="text" id="item-input" placeholder="상품을 입력하세요.">
+                <input type="number" id="price-input" placeholder="가격">
+                <button id="add-btn">담기</button>
+            </div>
+        </div>
+    </header>
+    <div class="page-wrapper">
+        <aside class="ad-sidebar ad-left">
+            <div class="ad-banner">
+                <p> 로켓 배송 런칭 기념!<br>전 품목 백만원 할인 (아님)</p>
+            </div>
+        </aside>
+        <main class="cart-container">
+            <h2 class="cart-title">장바구니</h2>
+            <div class="cart-layout">
+                <section class="cart-left">
+                    <div class="select-all-bar" id="select-bar">
+                        <label>
+                            <input type="checkbox" id="check-all">
+                            <span>전체선택</span>
+                        </label>
+                        <button id="del-checked-btn">선택삭제</button>
+                    </div>
+
+                    <ul id="cart-list">
+                        </ul>
+
+                    <div id="empty-cart" class="empty-cart-box">
+                        <i class="fa-solid fa-cart-arrow-down empty-icon"></i>
+                        <p class="empty-text">장바구니에 담은 상품이 없습니다.</p>
+                        <button id="recommend-btn">오늘의 추천상품 보기</button>
+                    </div>
+                </section>
+
+                <aside class="cart-right">
+                    <div class="summary-box">
+                        <div class="summary-row">
+                            <span>총 상품가격</span>
+                            <span id="product-total"><span id="total-price">0</span>원</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>배송비</span>
+                            <span id="shipping-fee">0원</span>
+                        </div>
+                        <hr>
+                        <div class="summary-total">
+                            <span>총 결제예상금액</span>
+                            <span class="final-price"><span id="final-total">0</span>원</span>
+                        </div>
+                        <button class="order-btn">주문하기</button>
+                    </div>
+                </aside>
+            </div>
+        </main>
+        <aside class="ad-sidebar ad-right">
+            <div class="ad-banner">
+                <p>💎 당신을 위한<br>특별한 혜택! (없?음)</p>
+            </div>
+        </aside>
+    </div>
+    <script src="03_shoppingList.js"></script>
+</body>
+</html>

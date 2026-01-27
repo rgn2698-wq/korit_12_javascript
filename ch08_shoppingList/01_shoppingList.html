@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쇼핑 리스트</title>
+  <link rel="stylesheet" href="01_shoppingList.css">
+</head>
+<body>
+  <div class="shopping-box">
+    <h1 class="title">장바구니 🛍️</h1>
+    
+    <div class="input-group">
+      <input id="item-input" type="text" placeholder="상품 이름">
+      <input id="price-input" type="number" placeholder="가격">
+      <button id="add-btn">추가</button>
+    </div>
+
+    <ul id="shopping-list" class="list">
+        </ul>
+
+    <div class="total-wrap">
+        총 합계: <span id="total-price">0</span>원
+    </div>
+  </div>
+
+  <script src="01_shoppingList.js"></script>
+</body>
+</html>

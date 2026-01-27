@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body bgcolor="777777">
+  <select id="sel1" onchange="dochange();">
+    <option value="KR">한국</option>
+    <option value="CN">중국</option>
+    <option value="JP">일본</option>
+  </select>
+  <script>
+    function dochange() {
+      let selVal = document.getElementById('sel1').value;
+      console.log(selVal);
+    }
+  </script>
+
+</body>
+</html>

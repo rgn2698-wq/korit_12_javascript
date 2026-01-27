@@ -1,46 +1,81 @@
-const fieldInput = document.getElementById('field-input');
-const timeInput = document.getElementById('time-input');
-const calcBtn = document.getElementById('calc-btn');
-const loadingSection = document.getElementById('loading');
-const resultSection = document.getElementById('result');
-const resultField = document.getElementById('result-field');
-const resultDays = document.getElementById('result-days');
+const startBtn = document.querySelector(".start_btn");
+const modalBtn = document.querySelector(".modal_btn");
+const closeBtn = document.querySelector(".close_btn");
+const shareBtn = document.querySelector(".share_btn");
+const resultSection = document.querySelector(".result");
+const loadingSection = document.querySelector(".result_loading");
+const modalSection = document.querySelector("#modal");
+const inputs = document.querySelector(".inputs");
 
-// 2. 계산 함수
+const fieldInput = document.querySelector("#field_value");
+const timeInput = document.querySelector("#time_value");
+const fieldResult = document.querySelector(".field_result");
+const timeResult = document.querySelector(".time_result");
+
+
 function calculate() {
     const field = fieldInput.value;
-    const time = parseInt(timeInput.value);
+    const time = Number(timeInput.value);
 
-    // 유효성 검사
+
     if(field === "") {
-        alert("입력 되지 않았습니다.");
+        alert("어떤 분야의 전문가가 되고 싶으신가요?");
         fieldInput.focus();
         return;
-    }
-    if(isNaN(time) || time <= 0 || time > 24) {
-        alert("시간이 제대로 입력되지않았습니다.");
+    } 
+    if(time <= 0 || time > 24) {
+        alert("훈련 시간은 1시간 이상 24시간 이하로 입력해 주세요.");
         timeInput.focus();
         return;
     }
 
-    // 1만 시간 계산 로직
     const days = Math.ceil(10000 / time);
 
-    // 3. 연출
-    loadingSection.classList.remove('hidden');
-    resultSection.classList.add('hidden');
-    
-    // 버튼 숨기기
-    calcBtn.style.display = 'none'; 
+
+    loadingSection.style.display = "block";
+    resultSection.style.display = "none";
+
 
     setTimeout(function() {
-        loadingSection.classList.add('hidden');
-        resultSection.classList.remove('hidden');
+        loadingSection.style.display = "none";
+        resultSection.style.display = "flex";
         
-        resultField.innerText = field;
-        resultDays.innerText = days;
+
+        fieldResult.innerText = field;
+        timeResult.innerText = days;
     }, 1500);
 }
 
-// 4. 클릭 이벤트 연결
-calcBtn.addEventListener('click', calculate);
+
+function openModal() {
+    modalSection.style.display = "flex";
+}
+
+function closeModal() {
+    modalSection.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modalSection) {
+        closeModal();
+    }
+}
+
+
+function copyUrl() {
+    const url = window.location.href;
+    
+
+    navigator.clipboard.writeText(url).then(() => {
+        alert("URL이 복사되었습니다.");
+    }).catch(err => {
+        alert("URL 복사에 실패했습니다.");
+    });
+}
+
+
+startBtn.addEventListener("click", calculate);
+modalBtn.addEventListener("click", openModal);
+closeBtn.addEventListener("click", closeModal);
+shareBtn.addEventListener("click", copyUrl);

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body bgcolor="777777">
+  <input 
+  type="text"
+  onkeypress="myfunc(event)"
+  onkeydown="myfunc(event)"
+  onkeyup="myfunc(event)"
+  >
+  <script>
+    function myfunc(event) {
+      console.log(event.type);    // 이벤트 이름 출력
+      // console.log(event.target);  // 이벤트가 발생한 요소
+      console.log(event.target.value);  // 이벤트 입력 시점에
+    }
+  </script>
+</body>
+</html>
