@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 & 회원가입 - Interactive Bear</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="login_style.css">
+</head>
+<body>
+
+    <div class="bear-container" id="bear-container">
+        <svg id="bear-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160">
+            <circle cx="40" cy="40" r="30" fill="#D99E82"/>
+            <circle cx="160" cy="40" r="30" fill="#D99E82"/>
+            <circle cx="40" cy="40" r="20" fill="#E8C3B0"/>
+            <circle cx="160" cy="40" r="20" fill="#E8C3B0"/>
+            <circle cx="100" cy="90" r="60" fill="#D99E82"/>
+            <ellipse cx="100" cy="105" rx="35" ry="25" fill="#E8C3B0"/>
+            <ellipse cx="100" cy="95" rx="15" ry="10" fill="#5E3A2F"/>
+            <g id="eyes-group">
+                <circle class="eye-white" cx="75" cy="80" r="12" fill="#FFFFFF"/>
+                <circle class="eye-pupil" id="pupil-left" cx="75" cy="80" r="5" fill="#333333"/>
+                <circle class="eye-white" cx="125" cy="80" r="12" fill="#FFFFFF"/>
+                <circle class="eye-pupil" id="pupil-right" cx="125" cy="80" r="5" fill="#333333"/>
+            </g>
+            <g id="hands-group">
+                <rect class="hand hand-left" x="30" y="130" width="40" height="50" rx="20" fill="#D99E82"/>
+                <rect class="hand hand-right" x="130" y="130" width="40" height="50" rx="20" fill="#D99E82"/>
+            </g>
+        </svg>
+    </div>
+
+    <div class="container" id="main-container">
+        
+        <div class="form-container sign-up-container">
+            <form action="#" id="signUpForm">
+                <h1>계정 만들기</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>또는 이메일로 가입하기</span>
+                
+                <div class="input-group">
+                    <input type="text" id="regName" placeholder="이름" required />
+                </div>
+                <div class="input-group">
+                    <input type="email" id="regEmail" placeholder="이메일" required />
+                </div>
+                <div class="input-group">
+                    <input type="password" id="regPass" class="password-input" placeholder="비밀번호" required />
+                    <i class="fa-solid fa-eye toggle-password" data-target="regPass"></i>
+                </div>
+                
+                <button type="submit">가입하기</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in-container">
+            <form action="#" id="signInForm">
+                <h1>로그인</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-google"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>또는 이메일 계정 사용</span>
+                
+                <div class="input-group">
+                    <input type="email" id="loginEmail" placeholder="이메일" required />
+                </div>
+                <div class="input-group">
+                    <input type="password" id="loginPass" class="password-input" placeholder="비밀번호" required />
+                    <i class="fa-solid fa-eye toggle-password" data-target="loginPass"></i>
+                </div>
+                
+                <a href="#">비밀번호를 잊으셨나요?</a>
+                <button type="submit">로그인</button>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>돌아오셨군요!</h1>
+                    <p>계정이 이미 있으신가요? 로그인하고 계속하세요.</p>
+                    <button class="ghost" id="signIn">로그인</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>안녕하세요!</h1>
+                    <p>아직 회원이 아니신가요? 저희와 함께 시작해보세요.</p>
+                    <button class="ghost" id="signUp">회원가입</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="login_logic.js"></script>
+</body>
+</html>
